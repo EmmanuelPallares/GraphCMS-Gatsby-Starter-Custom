@@ -1,12 +1,12 @@
-fragment Seo on Seo {
+fragment ScheduledOperation on ScheduledOperation {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
-  title
   description
-  keywords
+  errorMessage
+  rawPayload
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -25,14 +25,23 @@ fragment Seo on Seo {
       remoteId: id
     }
   }
-  image {
+  release {
+    ... on ScheduledRelease {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+  status
+  affectedDocuments {
     ... on Asset {
       remoteTypeName: __typename
       remoteId: id
       locale
     }
-  }
-  remoteParent: parent {
+    ... on Author {
+      remoteTypeName: __typename
+      remoteId: id
+    }
     ... on Page {
       remoteTypeName: __typename
       remoteId: id
@@ -41,9 +50,7 @@ fragment Seo on Seo {
       remoteTypeName: __typename
       remoteId: id
     }
-  }
-  scheduledIn {
-    ... on ScheduledOperation {
+    ... on Seo {
       remoteTypeName: __typename
       remoteId: id
     }

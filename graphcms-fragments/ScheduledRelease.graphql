@@ -1,4 +1,4 @@
-fragment Seo on Seo {
+fragment ScheduledRelease on ScheduledRelease {
   stage
   remoteId: id
   createdAt
@@ -6,7 +6,10 @@ fragment Seo on Seo {
   publishedAt
   title
   description
-  keywords
+  errorMessage
+  isActive
+  isImplicit
+  releaseAt
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -25,27 +28,11 @@ fragment Seo on Seo {
       remoteId: id
     }
   }
-  image {
-    ... on Asset {
-      remoteTypeName: __typename
-      remoteId: id
-      locale
-    }
-  }
-  remoteParent: parent {
-    ... on Page {
-      remoteTypeName: __typename
-      remoteId: id
-    }
-    ... on Post {
-      remoteTypeName: __typename
-      remoteId: id
-    }
-  }
-  scheduledIn {
+  operations {
     ... on ScheduledOperation {
       remoteTypeName: __typename
       remoteId: id
     }
   }
+  status
 }
