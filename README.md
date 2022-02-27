@@ -1,15 +1,15 @@
-# gatsby-starter-graphcms-blog
+# Gatsby-Starter-Custom-Vitoz
 
 > A [Gatsby](httsp://gatsbyjs.com) starter for creating a basic blog with [GraphCMS](https://graphcms.com)
 
-• [Demo](https://gatsby-starter-graphcms-blog.vercel.app) • [`gatsby-source-graphcms`](https://github.com/GraphCMS/gatsby-source-graphcms)
+• [Demo](https://graph-cms-gatsby-starter-custom-9aray7341-emmanuelpallares.vercel.app) • [`gatsby-source-graphcms`](https://github.com/GraphCMS/gatsby-source-graphcms)
 
 ## Quick start
 
 1. **Create a new Gatsby project via the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli)**
 
 ```shell
-gatsby new graphcms-blog https://github.com/GraphCMS/gatsby-starter-graphcms-blog
+gatsby new graphcms-blog https://github.com/EmmanuelPallares/GraphCMS-Gatsby-Starter-Custom
 ```
 
 2. **Provide your GraphCMS project keys**
